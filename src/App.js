@@ -1,38 +1,31 @@
-
 import './App.css';
-
+import './css/main.css';
 import Layout from './components/Layout';
-import React,{useState } from 'react';
-import Searchbar from './components/Searchbar';
-import Getmovie from './components/Getmovie';
-import res from './components/tempRes';
-import Moviecard from './components/moviecard'
-import GetmovieTest from './components/GetmovieTest'
+import React,{useState,useEffect} from 'react';
+import SearchResults from './components/SearchResults'
+import Getmovies from './components/Getmovies';
+
 
 const App = () => {
   const onChangeHandler = e => {
-    setSearch(e.target.value)
+    if(e.target.value.length >= 3) {
+      search = e.target.value
+    }
   };
-  const [search, setSearch] = useState('');
-  const [movie, setMovie] = useState(GetmovieTest({search}));
-  const [movieInfo,setMovieInfo] = useState([]);
-  const listMovieInfo = movieInfo.map((title)=><Moviecard data={title}/>);
-  console.log(movieInfo)
+  let search = "James Bond";
+  const [movie, setMovie] = useState(Getmovies({search}));
   
-  const handleInput= () => {setMovie(GetmovieTest({search})); movie.then((a)=>{console.log(a.Title)})}
-  const handleInputTST= () => {setMovie(GetmovieTest({search})); movie.then((a)=>{ movieInfo.push(a.Title)}); console.log(movieInfo)}
-  //Av en eller annen grunn må search trykkes på 2 ganger før tittel endres, finn ut hvorfor.
  
+  const handleInput= () => {setMovie(Getmovies({search}))};
   
 
   return (
     <Layout>
-      <input type="text" value={search} onChange={onChangeHandler}/>
-        <button onClick={handleInputTST}>search</button>
-      <ul>
-          <li>sd</li>
-          {listMovieInfo}
-      </ul>
+      <input type="text" defaultValue="james bond" onChange={onChangeHandler}/>
+        <button onClick={handleInput}>search</button>
+        <SearchResults data={movie}/>
+         
+     
     </Layout>
   );
 };

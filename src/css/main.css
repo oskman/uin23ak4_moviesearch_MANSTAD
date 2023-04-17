@@ -1,0 +1,53 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap");
+html, body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+}
+
+article {
+  text-align: center;
+  align-self: center;
+  background-color: white;
+  border-style: solid;
+}
+
+article:hover {
+  transition: 0.6s;
+  background-color: lightblue;
+}
+
+li {
+  list-style: none;
+}
+
+h1 {
+  text-align: center;
+}
+
+input {
+  text-align: center;
+  width: 20rem;
+  align-self: center;
+  margin-bottom: 1rem;
+}
+
+button {
+  align-self: center;
+  width: 10rem;
+  height: 3rem;
+  transition: ease-in-out 0.3s;
+  background-color: lightseagreen;
+  border-right: 0px;
+  border-left: 0px;
+}
+
+button:hover {
+  background-color: lightblue;
+}
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNhc3MvbWFpbi5zY3NzIiwibWFpbi5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQVEseUZBQUE7QUFFUjtFQUNJLGtDQUFBO0VBQ0EsZ0JBQUE7QUNBSjs7QURHQTtFQUNJLGFBQUE7RUFDQSxzQkFBQTtBQ0FKOztBREdFO0VBQ0Usa0JBQUE7RUFDQSxrQkFBQTtFQUNBLHVCQUFBO0VBQ0EsbUJBQUE7QUNBSjs7QURFRTtFQUNFLGdCQUFBO0VBQ0EsMkJBQUE7QUNDSjs7QURHRTtFQUNFLGdCQUFBO0FDQUo7O0FER0U7RUFDRSxrQkFBQTtBQ0FKOztBREdFO0VBQ0Usa0JBQUE7RUFDQSxZQUFBO0VBQ0Esa0JBQUE7RUFDQSxtQkFBQTtBQ0FKOztBRElFO0VBQ0Usa0JBQUE7RUFDQSxZQUFBO0VBQ0EsWUFBQTtFQUNBLDRCQUFBO0VBQ0EsK0JBQUE7RUFDQSxpQkFBQTtFQUNBLGdCQUFBO0FDREo7O0FES0U7RUFDRSwyQkFBQTtBQ0ZKIiwiZmlsZSI6Im1haW4uY3NzIn0= */
