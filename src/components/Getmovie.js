@@ -9,7 +9,6 @@ const Getmovie = (searchValue) => {
       try {
         const respons = await fetch(URL);
          const data = await respons.json();
-         
          return data;
          
       } catch (error) {
